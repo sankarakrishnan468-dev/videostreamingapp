@@ -1,0 +1,56 @@
+.live-engagement {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0.9rem;
+  border: 1px solid rgba(136, 153, 177, 0.2);
+  border-radius: 12px;
+  background: rgba(11, 17, 27, 0.72);
+  color: #e9eef7;
+}
+
+.live-engagement-actions,
+.live-creator-card {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.live-engagement button,
+.live-creator-card a {
+  border: 1px solid rgba(158, 189, 255, 0.36);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  color: #dce8ff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.live-engagement button[aria-pressed="true"] {
+  background: rgba(158, 189, 255, 0.18);
+}
+
+.live-creator-card {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.live-creator-card > div {
+  display: grid;
+  flex: 1;
+  gap: 0.2rem;
+}
+
+.live-creator-card span,
+.live-engagement-note,
+.live-engagement-error {
+  margin: 0;
+  color: #a3afc2;
+  font-size: 0.82rem;
+}
+
+.live-engagement-error {
+  color: #ff9e9e;
+}

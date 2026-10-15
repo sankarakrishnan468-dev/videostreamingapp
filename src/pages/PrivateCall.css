@@ -1,0 +1,235 @@
+.call-page {
+  min-height: 100vh;
+  padding: 0 40px;
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(94, 55, 153, 0.14), transparent 48%),
+    var(--page-bg);
+}
+
+.call-header {
+  display: flex;
+  width: min(100%, 1180px);
+  height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.call-home-link {
+  color: #a39daf;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.call-home-link:hover {
+  color: var(--text-primary);
+}
+
+.call-main {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: 46px 0 35px;
+}
+
+.call-heading {
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.call-eyebrow {
+  margin: 0 0 8px;
+  color: #b798f7;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+}
+
+.call-heading h1 {
+  margin: 0;
+  color: var(--text-primary);
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(27px, 4vw, 38px);
+  letter-spacing: -1.5px;
+}
+
+.call-status {
+  min-height: 20px;
+  margin: 9px 0 0;
+  color: #aaa4b6;
+  font-size: 13px;
+}
+
+.call-videos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.call-video-tile {
+  position: relative;
+  min-height: 250px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 15px;
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(73, 61, 92, 0.3), transparent 50%),
+    #17141f;
+}
+
+.call-video-tile video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  object-fit: cover;
+}
+
+.local-tile video {
+  transform: scaleX(-1);
+}
+
+.video-name {
+  position: absolute;
+  bottom: 13px;
+  left: 14px;
+  padding: 5px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 7px;
+  background: rgba(10, 9, 14, 0.7);
+  color: #f6f5fb;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.camera-off {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #a39daf;
+  font-size: 13px;
+  transform: translate(-50%, -50%);
+}
+
+.call-toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 0 22px;
+}
+
+.call-control,
+.copy-invite {
+  min-height: 40px;
+  padding: 0 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #f6f5fb;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.call-control:hover,
+.copy-invite:hover:not(:disabled) {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.call-control:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.call-control.is-off {
+  border-color: rgba(255, 153, 161, 0.25);
+  background: rgba(196, 66, 80, 0.16);
+  color: #ffabb2;
+}
+
+.call-control.end-call {
+  border-color: rgba(255, 120, 133, 0.45);
+  background: #b74350;
+  color: white;
+}
+
+.call-control.end-call:hover {
+  background: #cc4f5c;
+}
+
+.invite-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 17px 19px;
+  border: 1px solid rgba(167, 123, 255, 0.19);
+  border-radius: 12px;
+  background: rgba(30, 24, 42, 0.65);
+}
+
+.invite-panel strong {
+  color: #edeaf4;
+  font-size: 12px;
+}
+
+.invite-panel p {
+  margin: 5px 0 0;
+  color: #9690a2;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.copy-invite {
+  flex: 0 0 auto;
+  border-color: rgba(201, 174, 255, 0.5);
+  background: #a77bff;
+  color: #150d22;
+}
+
+.copy-invite:hover:not(:disabled) {
+  background: #b994ff;
+}
+
+.copy-invite:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+@media (max-width: 640px) {
+  .call-page {
+    padding: 0 18px;
+  }
+
+  .call-main {
+    padding-top: 34px;
+  }
+
+  .call-videos {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .call-video-tile,
+  .call-video-tile video {
+    min-height: 200px;
+  }
+
+  .call-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .call-control {
+    flex: 1 1 30%;
+    padding: 0 8px;
+    font-size: 11px;
+  }
+
+  .invite-panel {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+}

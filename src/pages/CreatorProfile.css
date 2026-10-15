@@ -1,0 +1,122 @@
+.creator-profile-page {
+  min-height: 100vh;
+  background: #080d15;
+  color: #e9eef7;
+}
+
+.creator-profile-header,
+.creator-profile-content {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.creator-profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+}
+
+.creator-profile-header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.creator-profile-header a {
+  color: #cad5e7;
+  text-decoration: none;
+}
+
+.creator-profile-header .brand {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.creator-profile-content {
+  padding: 2rem 0 4rem;
+}
+
+.creator-profile-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(136, 153, 177, 0.2);
+  border-radius: 16px;
+  background: rgba(17, 25, 38, 0.88);
+}
+
+.creator-profile-avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.creator-profile-card h1,
+.creator-profile-card p {
+  margin: 0.3rem 0;
+}
+
+.creator-profile-card > div {
+  flex: 1;
+}
+
+.creator-profile-eyebrow,
+.creator-profile-username,
+.creator-profile-card span {
+  color: #9eabc0;
+}
+
+.creator-profile-card > button {
+  border-radius: 8px;
+  padding: 0.65rem 0.9rem;
+  background: #9ebdff;
+  color: #0a1019;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.creator-video-section {
+  margin-top: 2rem;
+}
+
+.creator-video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.creator-video-grid article {
+  padding: 0.75rem;
+  border: 1px solid rgba(136, 153, 177, 0.2);
+  border-radius: 12px;
+  background: rgba(17, 25, 38, 0.88);
+}
+
+.creator-video-grid video {
+  width: 100%;
+  border-radius: 8px;
+  background: #000;
+}
+
+.creator-video-grid h3 {
+  margin: 0.7rem 0 0.25rem;
+}
+
+.creator-video-grid p {
+  color: #a3afc2;
+}
+
+.creator-profile-error {
+  color: #ff9e9e;
+}
+
+@media (max-width: 600px) {
+  .creator-profile-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}

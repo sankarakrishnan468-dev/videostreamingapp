@@ -1,0 +1,18 @@
+.stream-chat {
+  display: flex;
+  width: min(100%, 370px);
+  min-height: 490px;
+  flex-direction: column;
+}
+
+.stream-chat .comment-thread {
+  flex: 1;
+  align-content: start;
+}
+
+@media (max-width: 760px) {
+  .stream-chat {
+    width: 100%;
+    min-height: 350px;
+  }
+}
